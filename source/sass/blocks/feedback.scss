@@ -1,0 +1,74 @@
+$input-color: #f2f2f2;
+
+.feedback__submit {
+  font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 0 50px;
+  height: 58px;
+}
+
+.feedback__submit-wrapper {
+  margin: 0 20px 48px;
+  text-align: center;
+}
+
+.feedback__fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 17px;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+.feedback__fieldset-header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feedback__textarea,
+.feedback__input-text,
+.feedback__input-phone,
+.feedback__input-email {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.feedback__textarea {
+  padding: 20px;
+  width: 100%;
+  border: none;
+  resize: none;
+
+  background-color: $input-color;
+}
+
+.feedback__label {
+  margin-bottom: 20px;
+}
+
+.feedback__input-name {
+  font-size: 14px;
+  line-height: 26px;
+
+  margin-right: 14px;
+}
+
+.feedback__input-text,
+.feedback__input-phone,
+.feedback__input-email {
+  height: 58px;
+  width: 100%;
+  padding: 0 10px;
+
+  background-color: $input-color;
+  border: none;
+}
+
+.feedback__label-text {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}

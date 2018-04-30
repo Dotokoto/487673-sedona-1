@@ -1,0 +1,16 @@
+.button {
+  text-align: center;
+  text-transform: uppercase;
+  border: 0;
+
+  color: #ffffff;
+  background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}

@@ -1,0 +1,10 @@
+@import "../utils.scss";
+
+.recommendations {
+  @include remove-list-style();
+  text-align: left;
+  padding: 40px 35px 40px 70px;
+
+  color: #000000;
+  background-color: #ffffff;
+}

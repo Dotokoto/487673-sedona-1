@@ -1,0 +1,39 @@
+@import "../utils.scss";
+
+.social {
+  margin-bottom: 50px;
+}
+
+.social__list {
+  @include remove-list-style();
+}
+
+.social__link,
+.social__item {
+  height: 48px;
+  width: 48px;
+}
+
+.social__link {
+  @include hide-text();
+  background-color: #ffffff;
+
+  display: block;
+
+  &--twitter {
+    mask: url("/img/icon-twitter.svg") center center no-repeat;
+  }
+
+  &--facebook {
+    mask: url("/img/icon-facebook.svg") center center no-repeat;
+  }
+
+  &--youtube {
+    mask: url("/img/icon-youtube.svg") center center no-repeat;
+  }
+}
+
+.social__item {
+  display: inline-block;
+  margin-right: 6px;
+}
