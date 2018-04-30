@@ -1,3 +1,5 @@
+@import "../utils.scss";
+
 .video-presentation {
   text-align: center;
   text-transform: uppercase;
@@ -6,4 +8,11 @@
 
 .video-presentation__text-wrapper {
   margin: 0 30px 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .video-presentation__text-wrapper {
+    margin: 0 auto 40px;
+    max-width: 500px;
+  }
 }

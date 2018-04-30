@@ -1,5 +1,9 @@
 @import "../utils.scss";
 
+.main-nav {
+  position: relative;
+}
+
 .main-nav__toggle {
   @include remove-button-style();
   @include hide-text();
@@ -14,7 +18,7 @@
   transform: translateY(-50%);
 
   background-color: #81b3d2;
-  mask: url("/img/icon-menu.svg") center center no-repeat;
+  mask: url("../img/icon-menu.svg") center center no-repeat;
 }
 
 .main-nav__close {
@@ -24,4 +28,26 @@
 .main-nav__header {
   position: relative;
   height: 56px;
+}
+
+.main-nav__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -27px;
+  height: 83px;
+  width: 102px;
+  background: url("../img/logo-sedona-mobile.svg");
+}
+
+
+@media (min-width: $tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__header {
+    margin-top: -56px;
+    z-index: -1;
+  }
 }

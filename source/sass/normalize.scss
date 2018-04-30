@@ -1,4 +1,23 @@
+@import "utils.scss";
+
 html,
 body {
-  margin: 0;
+  min-width: $phone-width;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $gray-color;
+}
+
+@media (min-width: $tablet-width) {
+  html,
+  body {
+    min-width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  html,
+  body {
+    min-width: $desktop-width;
+  }
 }

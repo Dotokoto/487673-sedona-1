@@ -1,6 +1,9 @@
 @import "../utils.scss";
 
 .page-footer {
+  display: flex;
+  flex-direction: column;
+
   padding: 40px 20px 30px;
   text-align: center;
   text-transform: uppercase;
@@ -13,6 +16,11 @@
   line-height: 26px;
 }
 
+.page-footer__made-by {
+  display: flex;
+  justify-content: center;
+  line-height: 34px;
+}
 
 .page-footer__made-by-text {
   display: inline-block;
@@ -31,5 +39,15 @@
   display: block;
   height: 34px;
   width: 27px;
-  background: url("/img/logo-htmlacademy.svg") center center no-repeat;
+  background: url("../img/logo-htmlacademy.svg") center center no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    padding: 36px 60px;
+  }
 }

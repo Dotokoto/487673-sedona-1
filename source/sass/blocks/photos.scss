@@ -1,0 +1,19 @@
+@import "../utils.scss";
+
+@media (min-width: $tablet-width) {
+  .photos {
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  .photos__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photos {
+    width: 1200px;
+  }
+}

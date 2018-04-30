@@ -1,0 +1,13 @@
+@import "../utils.scss";
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $tablet-width) {
+  .reasons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
