@@ -1,0 +1,19 @@
+@import "../utils.scss";
+
+.content-wrapper {
+  width: $phone-width;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .content-wrapper {
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .content-wrapper {
+    width: $desktop-width;
+  }
+}

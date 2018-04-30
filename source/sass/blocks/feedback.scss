@@ -1,4 +1,9 @@
-$input-color: #f2f2f2;
+@import "../utils.scss";
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+}
 
 .feedback__submit {
   font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
@@ -26,6 +31,11 @@ $input-color: #f2f2f2;
   text-transform: uppercase;
 }
 
+.feedback__checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .feedback__textarea,
 .feedback__input-text,
 .feedback__input-phone,
@@ -42,7 +52,7 @@ $input-color: #f2f2f2;
   border: none;
   resize: none;
 
-  background-color: $input-color;
+  background-color: $gray-color;
 }
 
 .feedback__label {
@@ -63,7 +73,7 @@ $input-color: #f2f2f2;
   width: 100%;
   padding: 0 10px;
 
-  background-color: $input-color;
+  background-color: $gray-color;
   border: none;
 }
 
@@ -71,4 +81,97 @@ $input-color: #f2f2f2;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.feedback__required-text {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feedback__fieldset {
+    width: 648px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .feedback__fieldset--impressions {
+    order: -1;
+  }
+
+  .feedback__fieldset--name,
+  .feedback__fieldset--impressions {
+    width: 324px;
+    border-top: none;
+  }
+
+  .feedback__fieldset--name .feedback__fieldset-header,
+  .feedback__fieldset--impressions .feedback__fieldset-header {
+    text-align: left;
+  }
+
+  .feedback__fieldset--name .feedback__label {
+    display: flex;
+  }
+
+  .feedback__checkbox-wrapper {
+    flex-wrap: wrap;
+    height: 75px;
+    align-content: center;
+  }
+
+  .feedback__label-checkbox {
+    margin-right: 20px;
+  }
+
+  .feedback__submit-wrapper {
+    width: 648px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .feedback__submit {
+    margin: 0;
+  }
+
+  .feedback__required-text {
+    display: inline-block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .feedback__fieldset,
+  .feedback__submit-wrapper {
+    width: 960px;
+  }
+
+  .feedback__fieldset--name,
+  .feedback__fieldset--impressions {
+    width: 480px;
+  }
+
+  .feedback__checkbox-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .feedback__submit-wrapper {
+    margin: 58px 0 66px;
+    align-items: baseline;
+  }
+
+  .feedback__submit {
+    width: 480px;
+  }
 }

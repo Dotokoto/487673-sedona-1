@@ -1,3 +1,5 @@
+@import "../utils.scss";
+
 .page-header {
   background-color: #d6e8f2;
 }
@@ -8,7 +10,7 @@
   line-height: 0;
   padding: 0 40px;
 
-  background: url("/img/bg-back-mobile@1x.jpg") no-repeat;
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
   background-position: center bottom;
 }
 
@@ -21,12 +23,53 @@
 
 .page-header__logo-text {
   height: 150px;
-  background: url("/img/text-sedona.svg") center center no-repeat;
+  background: url("../img/text-sedona.svg") center center no-repeat;
   background-size: contain;
 }
 
 .page-header--big .page-header__logo-text {
   height: 390px;
-  background: url("/img/text-sedona-index.svg") center center no-repeat;
+  background: url("../img/text-sedona-index.svg") center center no-repeat;
   background-size: contain;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header,
+  .page-header__logo,
+  .page-header__logo-text {
+    height: 290px;
+  }
+
+  .page-header__logo {
+    background-size: cover;
+  }
+
+  .page-header__logo-text {
+    width: 456px;
+    margin: 0 auto;
+  }
+
+  .page-header--big,
+  .page-header--big .page-header__logo,
+  .page-header--big .page-header__logo-text {
+    height: 518px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header,
+  .page-header__logo,
+  .page-header__logo-text {
+    height: 300px;
+  }
+
+  .page-header__logo-text {
+    width: 460px;
+  }
+
+  .page-header--big,
+  .page-header--big .page-header__logo,
+  .page-header--big .page-header__logo-text {
+    height: 518px;
+  }
 }

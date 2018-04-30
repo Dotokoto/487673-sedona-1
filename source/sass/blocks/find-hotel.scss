@@ -12,6 +12,25 @@
   display: block;
   margin: 0 auto;
   height: 55px;
-  max-width: 280px;
+  width: 280px;
   line-height: 55px;
+}
+
+.find-hotel__description {
+  max-width: 480px;
+  margin: 30px auto 42px;
+}
+
+@media (min-width: $tablet-width) {
+  .find-hotel__button {
+    width: 458px;
+  }
+
+  .find-hotel__description {
+    margin: 40px auto 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+
 }

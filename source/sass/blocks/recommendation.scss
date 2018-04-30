@@ -1,0 +1,22 @@
+@import "../utils.scss";
+
+@media (min-width: $tablet-width) {
+  .recommendation {
+    margin: 0 50px;
+    width: 33%;
+    font-size: 14px;
+    height: 203px;
+  }
+
+  .recommendation--food {
+    order: 2;
+  }
+
+  .recommendation--souvenirs {
+    order: 3;
+  }
+
+  .recommendation__title {
+    font-size: 16px;
+  }
+}

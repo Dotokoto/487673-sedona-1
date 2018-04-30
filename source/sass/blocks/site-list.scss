@@ -23,5 +23,47 @@
 
 .site-list__link {
   @include remove-link-style();
+  display: block;
   color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 153px;
+      order: 3;
+    }
+  }
+
+  .site-list__item {
+    width: 153px;
+    border: none;
+    height: 56px;
+    background-color: #ffffff;
+    font-weight: bold;
+
+    &:nth-child(3) {
+      order: 4;
+    }
+
+    &:nth-child(4) {
+      order: 5;
+    }
+  }
+
+  .site-list__link {
+    color: #000000;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list::after,
+  .site-list__item {
+    width: 240px;
+  }
 }

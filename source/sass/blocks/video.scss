@@ -1,10 +1,69 @@
+@import "../utils.scss";
+
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .video__controls {
+  width: 280px;
   height: 66px;
-  margin: 0 17px;
 
   background-color: #f2f2f2;
 }
 
 .video__cover {
   display: block;
+}
+
+.video__replay,
+.video__subtitles,
+.video__fullscreen {
+  @include hide-text();
+}
+
+.video__progress {
+  width: 280px;
+  height: 45px;
+  margin-top: -45px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: $tablet-width) {
+  .video {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  .video__cover {
+    width: 648px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .video__controls {
+    width: 648px;
+    height: 92px;
+    margin-top: -92px;
+    background-color: transparent;
+  }
+
+  .video__progress {
+    width: 648px;
+    height: 92px;
+    margin-top: -92px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video,
+  .video__cover,
+  .video__controls,
+  .video__progress {
+    width: 800px;
+  }
 }
