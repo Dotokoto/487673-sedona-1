@@ -1,0 +1,17 @@
+@import "../utils.scss";
+
+.find-hotel {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 30px 30px 45px;
+}
+
+.find-hotel__button {
+  @include remove-link-style();
+
+  display: block;
+  margin: 0 auto;
+  height: 55px;
+  max-width: 280px;
+  line-height: 55px;
+}

@@ -1,0 +1,27 @@
+@import "../utils.scss";
+
+.main-nav__toggle {
+  @include remove-button-style();
+  @include hide-text();
+
+  display: inline-block;
+  height: 23px;
+  width: 23px;
+
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-color: #81b3d2;
+  mask: url("/img/icon-menu.svg") center center no-repeat;
+}
+
+.main-nav__close {
+  display: none;
+}
+
+.main-nav__header {
+  position: relative;
+  height: 56px;
+}

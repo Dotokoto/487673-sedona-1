@@ -1,0 +1,27 @@
+@import "../utils.scss";
+
+.site-list {
+  @include remove-list-style();
+}
+
+.site-list__item {
+  line-height: 55px;
+  height: 55px;
+
+  vertical-align: middle;
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.site-list__link {
+  @include remove-link-style();
+  color: #ffffff;
+}

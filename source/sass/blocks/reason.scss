@@ -1,0 +1,27 @@
+.reason {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.reason__title {
+  margin: 0;
+}
+
+.reason__text {
+  padding: 40px 25px;
+}
+
+.reason__image-link {
+  display: block;
+  line-height: 0;
+}
+
+.reason--main {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.reason--minor {
+  color: #000000;
+  background-color: #eeeeee;
+}

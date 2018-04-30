@@ -1,0 +1,35 @@
+@import "../utils.scss";
+
+.page-footer {
+  padding: 40px 20px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #fefefe;
+}
+
+.page-footer__hashtag {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+
+.page-footer__made-by-text {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.page-footer__htmlacademy {
+  display: inline-block;
+  height: 34px;
+  margin-left: 10px;
+}
+
+.page-footer__htmlacademy-link {
+  @include hide-text();
+
+  display: block;
+  height: 34px;
+  width: 27px;
+  background: url("/img/logo-htmlacademy.svg") center center no-repeat;
+}
