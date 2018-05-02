@@ -1,11 +1,86 @@
 @import "../utils.scss";
 
+.recommendation {
+  position: relative;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 38px;
+    width: 36px;
+    left: -48px;
+    top: -15px;
+    background-size: 38px 36px;
+    background-repeat: no-repeat;
+  }
+}
+
+.recommendation--motel::before {
+  background-image: url("/img/icon-house.svg");
+}
+
+.recommendation--food::before {
+  top: -11px;
+  left: -51px;
+  width: 38px;
+  background-image: url("/img/icon-burger.svg");
+}
+
+.recommendation--souvenirs::before {
+  top: -16px;
+  height: 39px;
+  background-size: 39px 36px;
+  background-image: url("/img/icon-gift.svg");
+}
+
+.recommendation__title {
+  margin-top: 0;
+  font-size: 17px;
+  line-height: 17px;
+  margin-bottom: 17px;
+  letter-spacing: 1px;
+}
+
+.recommendation__text {
+  font-size: 14px;
+  line-height: 21px;
+}
+
 @media (min-width: $tablet-width) {
   .recommendation {
-    margin: 0 50px;
+    margin: 0 45px;
     width: 33%;
     font-size: 14px;
-    height: 203px;
+  }
+
+  .recommendation::before {
+    display: block;
+    position: static;
+    margin: 0 auto 32px;
+  }
+
+  .recommendation--motel::before {
+    height: 75px;
+    width: 75px;
+    background-size: 75px 73px;
+  }
+
+  .recommendation--food .recommendation__text {
+    max-width: 155px;
+  }
+
+  .recommendation--food::before {
+    width: 78px;
+    height: 75px;
+    background-size: 78px 74px;
+  }
+
+  .recommendation--souvenirs::before {
+    height: 75px;
+    width: 64px;
+    background-size: 64px 74px;
   }
 
   .recommendation--food {
@@ -16,7 +91,30 @@
     order: 3;
   }
 
+  .recommendation__text {
+    margin: 0 auto;
+  }
+
   .recommendation__title {
-    font-size: 16px;
+    font-size: 20px;
+    margin-bottom: 23px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .recommendation {
+    margin: 0 55px;
+  }
+
+  .recommendation--food .recommendation__text {
+    max-width: 290px;
+  }
+
+  .recommendation--motel .recommendation__text {
+    max-width: 290px;
+  }
+
+  .recommendation--souvenirs .recommendation__text {
+    max-width: 290px;
   }
 }

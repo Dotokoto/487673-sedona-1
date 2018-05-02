@@ -2,15 +2,47 @@
 
 .page-header {
   background-color: #d6e8f2;
+  position: relative;
+}
+
+.page-header--big {
+  margin-bottom: 40px;
+}
+
+.page-header::before,
+.page-header::after {
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  display: block;
+  border: 1px solid #ffffff;
+}
+
+.page-header::before {
+  left: 0;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-color: transparent;
+  border-right-width: 175px;
+  border-bottom-width: 27px;
+}
+
+.page-header::after {
+  right: 0;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-left-color: transparent;
+  border-left-width: 175px;
+  border-bottom-width: 27px;
 }
 
 .page-header__logo {
-  height: 150px;
+  height: 160px;
   display: block;
   line-height: 0;
   padding: 0 40px;
 
-  background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background: url("/img/bg-back-mobile@1x.jpg") no-repeat;
   background-position: center bottom;
 }
 
@@ -22,14 +54,14 @@
 }
 
 .page-header__logo-text {
-  height: 150px;
-  background: url("../img/text-sedona.svg") center center no-repeat;
+  height: 140px;
+  background: url("/img/text-sedona.svg") center center no-repeat;
   background-size: contain;
 }
 
 .page-header--big .page-header__logo-text {
   height: 390px;
-  background: url("../img/text-sedona-index.svg") center center no-repeat;
+  background: url("/img/text-sedona-index.svg") center center no-repeat;
   background-size: contain;
 }
 
@@ -44,15 +76,27 @@
     background-size: cover;
   }
 
-  .page-header__logo-text {
+  .page-header--big .page-header__logo-text {
     width: 456px;
     margin: 0 auto;
+    background-size: 460px 450px;
+    background-position: 50% 42%;
+  }
+
+  .page-header::before {
+    border-right-width: 384px;
+    border-bottom-width: 38px;
+  }
+
+  .page-header::after {
+    border-left-width: 384px;
+    border-bottom-width: 38px;
   }
 
   .page-header--big,
   .page-header--big .page-header__logo,
   .page-header--big .page-header__logo-text {
-    height: 518px;
+    height: 520px;
   }
 }
 
@@ -70,6 +114,6 @@
   .page-header--big,
   .page-header--big .page-header__logo,
   .page-header--big .page-header__logo-text {
-    height: 518px;
+    height: 520px;
   }
 }

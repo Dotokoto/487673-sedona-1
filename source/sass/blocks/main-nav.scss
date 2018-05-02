@@ -18,7 +18,7 @@
   transform: translateY(-50%);
 
   background-color: #81b3d2;
-  mask: url("../img/icon-menu.svg") center center no-repeat;
+  mask: url("/img/icon-menu.svg") center center no-repeat;
 }
 
 .main-nav__close {
@@ -27,7 +27,7 @@
 
 .main-nav__header {
   position: relative;
-  height: 56px;
+  height: 55px;
 }
 
 .main-nav__logo {
@@ -37,7 +37,8 @@
   bottom: -27px;
   height: 83px;
   width: 102px;
-  background: url("../img/logo-sedona-mobile.svg");
+  background: url("/img/logo-sedona-mobile.svg");
+  z-index: 1;
 }
 
 

@@ -3,7 +3,7 @@
 .recommendations {
   @include remove-list-style();
   text-align: left;
-  padding: 40px 35px 40px 70px;
+  padding: 40px 35px 4px 70px;
 
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
 @media (min-width: $tablet-width) {
   .recommendations {
     flex-direction: row;
-    padding: 60px 50px 67px;
+    padding: 60px 0 67px;
     text-align: center;
   }
 }

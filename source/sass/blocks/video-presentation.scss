@@ -3,11 +3,23 @@
 .video-presentation {
   text-align: center;
   text-transform: uppercase;
-  margin: 40px 0 50px;
+  margin: 24px 0 40px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.video-presentation__title {
+  font-size: 18px;
+  margin-top: 34px;
+}
+
+.video-presentation__description {
+  font-size: 14px;
+  line-height: 23px;
+  margin-top: 30px;
 }
 
 .video-presentation__text-wrapper {
-  margin: 0 30px 40px;
+  margin: 0 30px 35px;
 }
 
 @media (min-width: $tablet-width) {

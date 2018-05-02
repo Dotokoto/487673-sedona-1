@@ -1,7 +1,7 @@
 @import "../utils.scss";
 
 .social {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
 }
@@ -23,21 +23,20 @@
   display: block;
 
   &--twitter {
-    mask: url("../img/icon-twitter.svg") center center no-repeat;
+    mask: url("/img/icon-twitter.svg") center center no-repeat;
   }
 
   &--facebook {
-    mask: url("../img/icon-facebook.svg") center center no-repeat;
+    mask: url("/img/icon-facebook.svg") center center no-repeat;
   }
 
   &--youtube {
-    mask: url("../img/icon-youtube.svg") center center no-repeat;
+    mask: url("/img/icon-youtube.svg") center center no-repeat;
   }
 }
 
 .social__item {
   display: inline-block;
-  margin-right: 6px;
 }
 
 @media (min-width: $tablet-width) {
@@ -47,5 +46,9 @@
 
   .social__list {
     display: flex;
+  }
+
+  .social__item {
+    margin-right: 6px;
   }
 }
