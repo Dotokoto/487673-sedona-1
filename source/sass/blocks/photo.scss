@@ -121,10 +121,16 @@
   }
 
   .photo__info {
-    height: 46px;
+    position: relative;
+    height: 80px;
+    box-sizing: border-box;
     margin-top: -80px;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 17px 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
     color: #ffffff;
+  }
+
+  .photo__likes {
+    width: 32px;
   }
 }
