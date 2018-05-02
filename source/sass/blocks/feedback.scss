@@ -11,14 +11,14 @@
 
 .feedback__submit {
   font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
-  font-size: 16px;
+  font-size: 21px;
   margin: 0 auto;
   padding: 0 50px;
   height: 58px;
 }
 
 .feedback__submit-wrapper {
-  margin: 0 20px 48px;
+  margin: 15px 20px 38px;
   text-align: center;
 }
 
@@ -48,8 +48,9 @@
 
 .feedback__fieldset-header {
   font-size: 18px;
+  line-height: 21px;
   font-weight: 700;
-  margin-top: 21px;
+  margin-top: 22px;
   letter-spacing: 0.3px;
   text-align: center;
   text-transform: uppercase;
@@ -87,7 +88,7 @@
 
 .feedback__input-name {
   font-size: 14px;
-  line-height: 26px;
+  line-height: 20px;
   text-transform: uppercase;
   margin: 6px 14px 0 3px;
 }
@@ -137,6 +138,8 @@
 .feedback__input-phone-wrapper,
 .feedback__input-email-wrapper {
   position: relative;
+  margin-top: 4px;
+
   &::after {
     content: "";
     position: absolute;
@@ -159,7 +162,18 @@
 
 .feedback__input-email-wrapper::after {
   background-image: url("/img/icon-mail.svg");
-  background-size: 16px 12px;
+  background-size: 20px 16px;
+  background-position: 22px 19px;
+}
+
+.feedback__label-radio,
+.feedback__label-checkbox {
+  height: 60px;
+  margin: 9px 0;
+}
+
+.feedback__fieldset:nth-of-type(2n + 3) {
+  margin-top: 0;
 }
 
 @media (min-width: $tablet-width) {
