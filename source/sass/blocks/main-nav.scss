@@ -62,3 +62,9 @@
     z-index: -1;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-nav__logo {
+    background: url("/img/logo-sedona-mobile.svg");
+  }
+}

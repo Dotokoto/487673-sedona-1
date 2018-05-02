@@ -118,6 +118,18 @@
     width: 460px;
   }
 
+  .page-header {
+    &:before {
+      border-right-width: 600px;
+      border-bottom-width: 60px;
+    }
+
+    &:after {
+      border-left-width: 600px;
+      border-bottom-width: 60px;
+    }
+  }
+
   .page-header--big,
   .page-header--big .page-header__logo,
   .page-header--big .page-header__logo-text {

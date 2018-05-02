@@ -58,3 +58,9 @@
     margin-bottom: 0;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    padding: 0 120px;
+  }
+}

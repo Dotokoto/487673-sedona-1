@@ -225,4 +225,16 @@
   .reason__image {
     width: 800px;
   }
+
+  .reason--main .reason__title {
+    margin-top: 14px;
+  }
+
+  .reason--main .reason__description {
+    max-width: 230px;
+  }
+
+  .reason--minor .reason__text {
+    padding: 47px 30px 65px;
+  }
 }

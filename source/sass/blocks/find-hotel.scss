@@ -62,5 +62,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .find-hotel {
+    padding: 48px 20px 68px;
+  }
 
+  .find-hotel__description {
+    margin: 20px auto 48px;
+  }
 }
