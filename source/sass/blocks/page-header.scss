@@ -67,13 +67,20 @@
 
 @media (min-width: $tablet-width) {
   .page-header,
-  .page-header__logo,
-  .page-header__logo-text {
+  .page-header__logo {
     height: 290px;
+  }
+
+  .page-header__logo-text {
+    width: 460px;
+    height: 270px;
+    margin: 0 auto;
+    background-size: contain;
   }
 
   .page-header__logo {
     background-size: cover;
+    background-position-y: bottom;
   }
 
   .page-header--big .page-header__logo-text {

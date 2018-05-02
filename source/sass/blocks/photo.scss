@@ -53,9 +53,14 @@
 @media (min-width: $tablet-width) {
   .photo {
     width: 50%;
-
+    padding-top: 0;
     margin: 0;
     flex-shrink: 1;
+    border: none;
+  }
+
+  .photo__wrapper {
+    margin: 0;
   }
 
   .photo:first-child {
@@ -63,11 +68,13 @@
   }
 
   .photo:first-child .photo__image {
-    width: 648px;
+    width: 650px;
+    height: 400px;
   }
 
   .photo__image {
-    width: 324px;
+    width: 325px;
+    height: 265px;
   }
 
   .photo__info {
@@ -76,10 +83,21 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: space-between;
-    height: 50px;
+    height: 80px;
+    box-sizing: border-box;
     margin-top: 0;
-    padding: 22px 20px 24px;
+    padding: 10px 30px 15px 22px;
     background-color: #f2f2f2;
+  }
+
+  .photo__likes {
+    width: 22px;
+    margin-top: 5px;
+    line-height: 20px;
+
+    &:before {
+      left: -32px;
+    }
   }
 }
 

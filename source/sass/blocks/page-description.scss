@@ -26,7 +26,16 @@
   }
 
   .page-description__title {
-    font-size: 21px;
+    font-size: 30px;
+    line-height: 70px;
+    margin: 55px auto 10px;
+  }
+
+  .page-description__text {
+    font-size: 14px;
+    line-height: 23px;
+    width: 440px;
+    margin: 0 auto;
   }
 
   .page-description__title br,

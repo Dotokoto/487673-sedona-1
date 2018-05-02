@@ -23,6 +23,17 @@
 }
 
 @media (min-width: $tablet-width) {
+  .video-presentation__title {
+    font-size: 30px;
+    margin-top: 38px;
+    margin-bottom: 25px;
+  }
+
+  .video-presentation__description {
+    width: 420px;
+    margin: 25px auto 0;
+  }
+
   .video-presentation__text-wrapper {
     margin: 0 auto 40px;
     max-width: 500px;
