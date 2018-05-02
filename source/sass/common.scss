@@ -1,0 +1,17 @@
+@import "utils.scss";
+
+.tablet-only {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .tablet-only {
+    display: inline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tablet-only {
+    display: none;
+  }
+}
