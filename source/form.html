@@ -60,18 +60,20 @@
           </fieldset>
           <fieldset class="feedback__fieldset feedback__fieldset--contacts">
             <h3 class="feedback__fieldset-header">Контактная информация:</h3>
-            <label class="feedback__label">
-              <span class="feedback__input-name">Контактный телефон<sup>*</sup>:</span>
-              <div class="feedback__input-phone-wrapper">
-                <input class="feedback__input-phone" placeholder="Введите телефон" name="phone" type="tel" required>
-              </div>
-            </label>
-            <label class="feedback__label">
-              <span class="feedback__input-name">Электронная почта<sup>*</sup>:</span>
-              <div class="feedback__input-email-wrapper">
-                <input class="feedback__input-email" placeholder="Введите e-mail" name="email" type="email" required>
-              </div>
-            </label>
+            <div class="feedback__fields-wrapper">
+              <label class="feedback__label">
+                <span class="feedback__input-name"><span class="hide-desktop">Контактный</span> телефон<sup>*</sup>:</span>
+                <div class="feedback__input-phone-wrapper">
+                  <input class="feedback__input-phone" placeholder="Введите телефон" name="phone" type="tel" required>
+                </div>
+              </label>
+              <label class="feedback__label">
+                <span class="feedback__input-name">Электронная почта<sup>*</sup>:</span>
+                <div class="feedback__input-email-wrapper">
+                  <input class="feedback__input-email" placeholder="Введите e-mail" name="email" type="email" required>
+                </div>
+              </label>
+            </div>
           </fieldset>
           <fieldset class="feedback__fieldset feedback__fieldset--impressions">
             <h3 class="feedback__fieldset-header">Ваше общее впечатление:</h3>
@@ -89,7 +91,7 @@
             </label>
           </fieldset>
           <fieldset class="feedback__fieldset feedback__fieldset--landmarks">
-            <h3 class="feedback__fieldset-header">Посещенные<br class="tablet-only"> достопримечательности:</h3>
+            <h3 class="feedback__fieldset-header">Посещенные<br class="hide-mobile"> достопримечательности:</h3>
             <div class="feedback__checkbox-wrapper">
               <label class="feedback__label-checkbox">
                 <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="devils-bridge">

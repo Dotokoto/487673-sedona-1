@@ -345,4 +345,69 @@
   .feedback__submit {
     width: 480px;
   }
+
+  .feedback__fieldset-header {
+    margin-top: 10px;
+    line-height: 23px;
+  }
+
+  .feedback__fieldset--name,
+  .feedback__fieldset--impressions {
+    width: 480px;
+    padding: 0;
+  }
+
+  .feedback__fieldset--impressions .feedback__fieldset-header {
+    text-align: center;
+  }
+
+  .feedback__fieldset--name {
+    padding-left: 75px;
+  }
+
+  .feedback__fieldset--contacts {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .feedback__fieldset--contacts .feedback__label {
+    display: inline-block;
+  }
+
+  .feedback__input-email-wrapper,
+  .feedback__input-phone-wrapper {
+    display: inline-block;
+  }
+
+  .feedback__input-phone,
+  .feedback__input-email {
+    width: 315px;
+  }
+
+  .feedback__fieldset--contacts .feedback__fieldset-header {
+    margin-bottom: 65px;
+  }
+
+  .feedback__fieldset--contacts .feedback__fields-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .feedback__fieldset--contacts .feedback__input-name {
+    margin-left: 0;
+  }
+
+  .feedback__checkbox-wrapper {
+    width: auto;
+  }
+
+  .feedback__fieldset--landmarks {
+    margin-bottom: 5px;
+  }
+
+  .feedback__submit-wrapper {
+    margin: 42px 0 50px;
+  }
+
 }
