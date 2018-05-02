@@ -3,6 +3,7 @@
 .reasons {
   display: flex;
   flex-direction: column;
+  margin-top: 45px;
 }
 
 @media (min-width: $tablet-width) {

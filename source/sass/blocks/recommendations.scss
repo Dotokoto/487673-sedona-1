@@ -3,7 +3,7 @@
 .recommendations {
   @include remove-list-style();
   text-align: left;
-  padding: 40px 35px 40px 70px;
+  padding: 40px 35px 4px 70px;
 
   display: flex;
   flex-direction: column;
@@ -13,10 +13,25 @@
   text-transform: uppercase;
 }
 
+.recommendations .desktop-only {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .recommendations {
     flex-direction: row;
-    padding: 60px 50px 67px;
+    padding: 60px 0 60px;
     text-align: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .recommendations {
+    width: 100%;
+    padding: 62px 0 80px;
+  }
+
+  .recommendations .desktop-only {
+    display: inline;
   }
 }

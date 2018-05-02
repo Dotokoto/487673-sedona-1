@@ -1,0 +1,68 @@
+@import "../utils.scss";
+
+.control {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control__text {
+  margin-left: 80px;
+  font-size: 18px;
+  line-height: 50px;
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+  }
+
+  &:before {
+    width: 45px;
+    height: 45px;
+    top: -13px;
+    left: -77px;
+    border: 5px solid $gray-color;
+    background-color: $gray-color;
+  }
+
+  &:after {
+    display: none;
+    top: 4px;
+    left: -59px;
+    z-index: 1;
+  }
+}
+
+.control:checked ~ .control__text:after {
+  display: block;
+}
+
+.control--radio ~ .control__text {
+  &:before,
+  &:after {
+    border-radius: 50%;
+  }
+
+  &:after {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    background-color: #000;
+  }
+}
+
+.control--checkbox ~ .control__text {
+  &:before {
+    border-radius: 5px;
+  }
+
+  &:after {
+    width: 23px;
+    height: 16px;
+    background-image: url("/img/icon-tick.svg");
+    background-repeat: no-repeat;
+  }
+}
+

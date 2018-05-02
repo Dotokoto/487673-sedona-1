@@ -2,15 +2,30 @@
 
 .site-list {
   @include remove-list-style();
+  position: relative;
+
+  @media (max-width: $tablet-width - 1) {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      bottom: 3px;
+      box-shadow: inset 2px 0 1px -3px rgba(0, 0, 0, 0.4);
+    }
+  }
 }
 
 .site-list__item {
-  line-height: 55px;
-  height: 55px;
+  line-height: 56px;
+  font-size: 18px;
+  height: 56px;
 
   vertical-align: middle;
   border-top: 1px solid #9ac2db;
   border-bottom: 1px solid #678fa8;
+  box-sizing: border-box;
 
   &:first-child {
     border-top: none;
@@ -57,6 +72,7 @@
   }
 
   .site-list__link {
+    font-size: 14px;
     color: #000000;
   }
 }

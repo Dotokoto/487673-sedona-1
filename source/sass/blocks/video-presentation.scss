@@ -3,16 +3,56 @@
 .video-presentation {
   text-align: center;
   text-transform: uppercase;
-  margin: 40px 0 50px;
+  margin: 24px 0 40px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.video-presentation__title {
+  font-size: 18px;
+  margin-top: 34px;
+}
+
+.video-presentation__description {
+  font-size: 14px;
+  line-height: 23px;
+  margin-top: 30px;
 }
 
 .video-presentation__text-wrapper {
-  margin: 0 30px 40px;
+  margin: 0 30px 35px;
 }
 
 @media (min-width: $tablet-width) {
+  .video-presentation__title {
+    font-size: 30px;
+    margin-top: 38px;
+    margin-bottom: 25px;
+  }
+
+  .video-presentation__description {
+    width: 420px;
+    margin: 25px auto 0;
+  }
+
   .video-presentation__text-wrapper {
     margin: 0 auto 40px;
     max-width: 500px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video-presentation {
+    border: none;
+    margin-top: 60px;
+    margin-bottom: 85px;
+  }
+
+  .video-presentation__title {
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .video-presentation__description {
+     margin-top: 20px;
   }
 }

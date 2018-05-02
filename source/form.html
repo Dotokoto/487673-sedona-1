@@ -60,52 +60,58 @@
           </fieldset>
           <fieldset class="feedback__fieldset feedback__fieldset--contacts">
             <h3 class="feedback__fieldset-header">Контактная информация:</h3>
-            <label class="feedback__label">
-              <span class="feedback__input-name">Контактный телефон<sup>*</sup>:</span>
-              <input class="feedback__input-phone" placeholder="Введите телефон" name="phone" type="tel" required>
-            </label>
-            <label class="feedback__label">
-              <span class="feedback__input-name">Электронная почта<sup>*</sup>:</span>
-              <input class="feedback__input-email" placeholder="Введите e-mail" name="email" type="email" required>
-            </label>
+            <div class="feedback__fields-wrapper">
+              <label class="feedback__label">
+                <span class="feedback__input-name"><span class="hide-desktop">Контактный</span> телефон<sup>*</sup>:</span>
+                <div class="feedback__input-phone-wrapper">
+                  <input class="feedback__input-phone" placeholder="Введите телефон" name="phone" type="tel" required>
+                </div>
+              </label>
+              <label class="feedback__label">
+                <span class="feedback__input-name">Электронная почта<sup>*</sup>:</span>
+                <div class="feedback__input-email-wrapper">
+                  <input class="feedback__input-email" placeholder="Введите e-mail" name="email" type="email" required>
+                </div>
+              </label>
+            </div>
           </fieldset>
           <fieldset class="feedback__fieldset feedback__fieldset--impressions">
             <h3 class="feedback__fieldset-header">Ваше общее впечатление:</h3>
             <label class="feedback__label-radio">
-              <input class="feedback__radio" type="radio" name="impression" value="good">
-              <span class="feedback__label-text">Скорее положительное</span>
+              <input class="feedback__radio control control--radio" type="radio" name="impression" value="good">
+              <span class="feedback__label-text control__text">Скорее положительное</span>
             </label>
             <label class="feedback__label-radio">
-              <input class="feedback__radio" type="radio" name="impression" value="bad">
-              <span class="feedback__label-text">Скорее отрицательное</span>
+              <input class="feedback__radio control control--radio" type="radio" name="impression" value="bad">
+              <span class="feedback__label-text control__text">Скорее отрицательное</span>
             </label>
             <label class="feedback__label-radio">
-              <input class="feedback__radio" type="radio" name="impression" value="not-defined">
-              <span class="feedback__label-text">Затрудняюсь ответить</span>
+              <input class="feedback__radio control control--radio" type="radio" name="impression" value="not-defined">
+              <span class="feedback__label-text control__text">Затрудняюсь ответить</span>
             </label>
           </fieldset>
-          <fieldset class="feedback__fieldset">
-            <h3 class="feedback__fieldset-header">Посещенные достопримечательности:</h3>
+          <fieldset class="feedback__fieldset feedback__fieldset--landmarks">
+            <h3 class="feedback__fieldset-header">Посещенные<br class="hide-mobile"> достопримечательности:</h3>
             <div class="feedback__checkbox-wrapper">
               <label class="feedback__label-checkbox">
-                <input class="feedback__checkbox" type="checkbox" name="places" value="devils-bridge">
-                <span class="feedback__label-text">Мост Дьявола</span>
+                <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="devils-bridge">
+                <span class="feedback__label-text control__text">Мост Дьявола</span>
               </label>
               <label class="feedback__label-checkbox">
-                <input class="feedback__checkbox" type="checkbox" name="places" value="slide-park">
-                <span class="feedback__label-text">Слайд-парк</span>
+                <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="slide-park">
+                <span class="feedback__label-text control__text">Гора-Колокол</span>
               </label>
               <label class="feedback__label-checkbox">
-                <input class="feedback__checkbox" type="checkbox" name="places" value="bell-rock">
-                <span class="feedback__label-text">Гора-Колокол</span>
+                <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="bell-rock">
+                <span class="feedback__label-text control__text">Слайд-парк</span>
               </label>
               <label class="feedback__label-checkbox">
-                <input class="feedback__input feedback__input--checkbox" type="checkbox" name="places" value="red-rock">
-                <span class="feedback__label-text">Красные Скалы</span>
+                <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="red-rock">
+                <span class="feedback__label-text control__text">Красные Скалы</span>
               </label>
             </div>
           </fieldset>
-          <fieldset class="feedback__fieldset">
+          <fieldset class="feedback__fieldset feedback__fieldset--emotions">
             <h3 class="feedback__fieldset-header">Опишите свои эмоции:</h3>
             <label class="feedback__label">
               <textarea class="feedback__textarea" name="emotions" placeholder="Опишите подробно все свои восторги" rows="5"></textarea>

@@ -3,23 +3,135 @@
 .page-description {
   text-align: center;
   text-transform: uppercase;
-  margin: 45px 15px 35px;
+  margin: 35px 15px 20px;
 }
 
 .page-description__title {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 26px;
   font-weight: 700;
 }
 
 .page-description__text {
-  font-size: 18px;
-  font-weight: 200;
+  font-size: 14px;
+  line-height: 25px;
+  margin-top: 28px;
 }
 
 @media (min-width: $tablet-width) {
   .page-description {
     max-width: 500px;
-    margin: 45px auto 35px;
+    margin: 50px auto 50px;
+    position: relative;
+  }
+
+  .page-description__title {
+    font-size: 30px;
+    line-height: 70px;
+    margin: 55px auto 10px;
+  }
+
+  .page-description--main .page-description__title {
+    font-size: 21px;
+    line-height: 21px;
+  }
+
+  .page-description__text {
+    font-size: 14px;
+    line-height: 23px;
+    width: 440px;
+    margin: 0 auto;
+  }
+
+  .page-description__title br,
+  .page-description__text br {
+    display: none;
+  }
+
+  .page-description::before,
+  .page-description::after {
+    position: absolute;
+    top: -110px;
+    content: "";
+    display: block;
+    border: 1px solid #ffffff;
+  }
+
+  .page-description::before {
+    left: -100px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-color: transparent;
+    border-right-width: 350px;
+    border-bottom-width: 60px;
+  }
+
+  .page-description::after {
+    right: -100px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-color: transparent;
+    border-left-width: 350px;
+    border-bottom-width: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-description.page-description--main {
+    margin: 50px auto 50px;
+
+    &:before,
+    &:after {
+      top: -110px;
+    }
+
+    &:before {
+      border-right-width: 360px;
+      border-bottom-width: 60px;
+    }
+
+    &:after {
+      border-left-width: 360px;
+      border-bottom-width: 60px;
+    }
+  }
+
+  .page-description {
+    margin: 100px auto 50px;
+
+    &:before,
+    &:after {
+      top: -155px;
+    }
+
+    &:before {
+      border-right-width: 350px;
+      border-bottom-width: 55px;
+    }
+
+    &:after {
+      border-left-width: 350px;
+      border-bottom-width: 55px;
+    }
+  }
+
+  .page-description--main .page-description__title {
+    font-size: 21px;
+    line-height: 24px;
+    margin-top: 52px;
+  }
+
+  .page-description--main .page-description__text {
+    width: 500px;
+    margin-top: 32px;
+  }
+
+  .page-description__title {
+    font-size: 30px;
+    line-height: 54px;
+  }
+
+  .page-description__text {
+    margin-top: 18px;
   }
 }
