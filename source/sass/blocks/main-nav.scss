@@ -23,16 +23,21 @@
 }
 
 .main-nav__close {
-  display: none;
+  @include remove-button-style();
+  @include hide-text();
+
   position: absolute;
-  top: -200px;
-  right: 10px;
+  top: -213px;
+  right: 9px;
+  cursor: pointer;
 
   &:after {
     display: block;
     content: '123';
     color: #fff;
-    background: url("/img/icon-cross.svg") 50% 50%;
+    height: 30px;
+    width: 30px;
+    background: url("/img/icon-cross.svg") 50% 50% no-repeat;
   }
 }
 
