@@ -80,17 +80,17 @@
   .page-description.page-description--main {
     margin: 50px auto 50px;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       top: -110px;
     }
 
-    &:before {
+    &::before {
       border-right-width: 360px;
       border-bottom-width: 60px;
     }
 
-    &:after {
+    &::after {
       border-left-width: 360px;
       border-bottom-width: 60px;
     }
@@ -99,17 +99,17 @@
   .page-description {
     margin: 100px auto 50px;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       top: -155px;
     }
 
-    &:before {
+    &::before {
       border-right-width: 350px;
       border-bottom-width: 55px;
     }
 
-    &:after {
+    &::after {
       border-left-width: 350px;
       border-bottom-width: 55px;
     }

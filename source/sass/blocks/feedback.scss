@@ -157,7 +157,6 @@
 .feedback__input-phone-wrapper::after {
   background-image: url("/img/icon-phone.svg");
   background-size: 18px 18px;
-
 }
 
 .feedback__input-email-wrapper::after {
@@ -194,7 +193,7 @@
       margin: 0;
     }
 
-    &:before {
+    &::before {
       display: none;
     }
   }
@@ -236,26 +235,36 @@
 
   .feedback__checkbox-wrapper {
     flex-wrap: wrap;
-    height: 75px;
     align-content: center;
+    flex-direction: row;
+    height: auto;
+    width: 465px;
+    margin: 0 auto 30px;
+    justify-content: space-between;
   }
 
   .feedback__label-checkbox {
-    margin-right: 20px;
+    width: 205px;
+    margin: 13px 20px 13px 0;
   }
 
   .feedback__submit-wrapper {
     width: 648px;
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
   }
 
   .feedback__submit {
     margin: 0;
+    padding: 0 70px;
   }
 
   .feedback__required-text {
     display: inline-block;
+    font-size: 14px;
+    line-height: 50px;
+    text-transform: uppercase;
   }
 
   .feedback__fieldset--contacts {
@@ -276,19 +285,6 @@
     margin-top: 5px;
   }
 
-  .feedback__checkbox-wrapper {
-    flex-direction: row;
-    height: auto;
-    width: 465px;
-    margin: 0 auto 30px;
-    justify-content: space-between;
-  }
-
-  .feedback__label-checkbox {
-    width: 205px;
-    margin: 13px 0;
-  }
-
   .feedback__fieldset--landmarks .feedback__fieldset-header {
     margin-bottom: 35px;
   }
@@ -299,20 +295,6 @@
 
   .feedback__textarea {
     padding: 15px 20px;
-  }
-
-  .feedback__submit-wrapper {
-    margin-top: 40px;
-  }
-
-  .feedback__submit {
-    padding: 0 70px;
-  }
-
-  .feedback__required-text {
-    font-size: 14px;
-    line-height: 50px;
-    text-transform: uppercase;
   }
 }
 
@@ -330,16 +312,18 @@
   .feedback__fieldset--name,
   .feedback__fieldset--impressions {
     width: 480px;
+    padding: 0;
   }
 
   .feedback__checkbox-wrapper {
     flex-direction: row;
     justify-content: space-between;
+    width: auto;
   }
 
   .feedback__submit-wrapper {
-    margin: 58px 0 66px;
     align-items: baseline;
+    margin: 42px 0 50px;
   }
 
   .feedback__submit {
@@ -349,12 +333,6 @@
   .feedback__fieldset-header {
     margin-top: 10px;
     line-height: 23px;
-  }
-
-  .feedback__fieldset--name,
-  .feedback__fieldset--impressions {
-    width: 480px;
-    padding: 0;
   }
 
   .feedback__fieldset--impressions .feedback__fieldset-header {
@@ -398,16 +376,7 @@
     margin-left: 0;
   }
 
-  .feedback__checkbox-wrapper {
-    width: auto;
-  }
-
   .feedback__fieldset--landmarks {
     margin-bottom: 5px;
   }
-
-  .feedback__submit-wrapper {
-    margin: 42px 0 50px;
-  }
-
 }

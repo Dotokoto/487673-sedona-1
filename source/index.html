@@ -13,7 +13,7 @@
       <include src="build/img/sprite.svg"></include>
     </div>
     <div class="content-wrapper">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--nojs">
         <div class="main-nav__wrapper">
           <ul class="site-list">
             <li class="site-list__item site-list__item--active button">
@@ -38,7 +38,11 @@
             <svg class="main-nav__button-icon" width="23" height="23"><use xlink:href="#icon-cross"></use></svg>
           </button>
         </div>
-        <div class="main-nav__logo"></div>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип" class="main-nav__logo">
+        </picture>
       </nav>
       <header class="page-header page-header--big">
         <a href="index.html" class="page-header__logo">

@@ -128,15 +128,19 @@
   }
 
   .page-header {
-    &:before {
+    &::before {
       border-right-width: 600px;
       border-bottom-width: 60px;
     }
 
-    &:after {
+    &::after {
       border-left-width: 600px;
       border-bottom-width: 60px;
     }
+  }
+
+  .page-header--big .page-header__logo-text {
+    background-size: auto;
   }
 
   .page-header__logo {

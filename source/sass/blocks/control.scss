@@ -12,13 +12,13 @@
   line-height: 50px;
   position: relative;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     position: absolute;
-    content: '';
+    content: "";
   }
 
-  &:before {
+  &::before {
     width: 45px;
     height: 45px;
     top: -13px;
@@ -27,7 +27,7 @@
     background-color: $gray-color;
   }
 
-  &:after {
+  &::after {
     display: none;
     top: 4px;
     left: -59px;
@@ -35,34 +35,33 @@
   }
 }
 
-.control:checked ~ .control__text:after {
+.control:checked ~ .control__text::after {
   display: block;
 }
 
 .control--radio ~ .control__text {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     border-radius: 50%;
   }
 
-  &:after {
+  &::after {
     width: 16px;
     height: 16px;
-    border: 2px solid #000;
-    background-color: #000;
+    border: 2px solid #000000;
+    background-color: #000000;
   }
 }
 
 .control--checkbox ~ .control__text {
-  &:before {
+  &::before {
     border-radius: 5px;
   }
 
-  &:after {
+  &::after {
     width: 23px;
     height: 16px;
     background-image: url("/img/icon-tick.svg");
     background-repeat: no-repeat;
   }
 }
-

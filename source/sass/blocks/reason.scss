@@ -217,6 +217,7 @@
 @media (min-width: $desktop-width) {
   .reason--main .reason__text {
     width: 400px;
+    box-sizing: border-box;
   }
 
   .reason--main .reason__image-link {
@@ -243,10 +244,6 @@
 
   .reason--minor .reason__text {
     padding: 47px 30px 65px;
-  }
-
-  .reason--main .reason__text {
-    box-sizing: border-box;
   }
 
   .reason--main .reason__image {
