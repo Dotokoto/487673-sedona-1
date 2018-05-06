@@ -18,8 +18,7 @@
   transform: translateY(-50%);
 
   cursor: pointer;
-  background-color: #81b3d2;
-  mask: url("/img/icon-menu.svg") center center no-repeat;
+  fill: #81b3d2;
 }
 
 .main-nav__close {
@@ -27,18 +26,14 @@
   @include hide-text();
 
   position: absolute;
-  top: -213px;
+  padding: 10px;
+  top: -217px;
   right: 9px;
   cursor: pointer;
+}
 
-  &:after {
-    display: block;
-    content: '123';
-    color: #fff;
-    height: 30px;
-    width: 30px;
-    background: url("/img/icon-cross.svg") 50% 50% no-repeat;
-  }
+.main-nav__close .main-nav__button-icon {
+  fill: #fff;
 }
 
 .main-nav__header {

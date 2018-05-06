@@ -16,23 +16,23 @@
   width: 48px;
 }
 
+.social__image {
+  fill: #fff;
+  width: 20px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .social__link {
   @include hide-text();
-  background-color: #ffffff;
+  position: relative;
+  background-color: #81b3d2;
 
   display: block;
 
-  &--twitter {
-    mask: url("/img/icon-twitter.svg") center center no-repeat;
-  }
-
-  &--facebook {
-    mask: url("/img/icon-facebook.svg") center center no-repeat;
-  }
-
-  &--youtube {
-    mask: url("/img/icon-youtube.svg") center center no-repeat;
-  }
 }
 
 .social__item {
