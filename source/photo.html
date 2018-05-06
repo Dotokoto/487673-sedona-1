@@ -1,163 +1,180 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>Фото и видео - Седона</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div style="display: none">
-    <include src="build/img/sprite.svg"></include>
-  </div>
-  <div class="content-wrapper">
-    <nav class="main-nav">
-      <div class="main-nav__wrapper">
-        <ul class="site-list">
-          <li class="site-list__item button">
-            <a class="site-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item site-list__item--active button">
-            <a class="site-list__link" href="photo.html">Фото и видео</a>
-          </li>
-          <li class="site-list__item button">
-            <a class="site-list__link" href="form.html">Форма отзыва</a>
-          </li>
-          <li class="site-list__item button">
-            <a class="site-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
-      <div class="main-nav__header">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <button class="main-nav__close" type="button">Закрыть меню</button>
-      </div>
-      <div class="main-nav__logo"></div>
-    </nav>
-    <header class="page-header">
-      <a href="index.html" class="page-header__logo">
-        <div class="page-header__logo-text"></div>
-      </a>
-    </header>
-    <main class="page-main">
-      <section class="page-description">
-        <h2 class="page-description__title">Фото и видео</h2>
-        <p class="page-description__text">
-          Не можете решиться на путешествие <br>из-за курса? Фотографии помогут <br>вам забыть о политике и экономике.
-        </p>
-      </section>
-      <section class="photos">
-        <h3 class="visually-hidden">Фотографии</h3>
-        <section class="photos__list">
-          <figure class="photo">
-            <div class="photo__wrapper">
-              <a class="photo__link" href="img/photo-sunset-desktop@2x.jpg">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
-                  <img src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" class="photo__image" alt="Неродные просторы">
-                </picture>
-              </a>
-              <div class="photo__info">
-                <div class="photo__title">Неродные просторы</div>
-                <div class="photo__author">Автор фото: Борис</div>
-                <div class="photo__likes">1350</div>
-              </div>
-            </div>
-          </figure>
-          <figure class="photo">
-            <div class="photo__wrapper">
-              <a class="photo__link" href="img/photo-cactus-desktop@2x.jpg">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
-                  <img src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" class="photo__image" alt="Местная растительность">
-                </picture>
-              </a>
-              <div class="photo__info">
-                <div class="photo__title">Местная растительность</div>
-                <div class="photo__author">Автор фото: Сергей</div>
-                <div class="photo__likes">143</div>
-              </div>
-            </div>
-          </figure>
-          <figure class="photo">
-            <div class="photo__wrapper">
-              <a class="photo__link" href="img/photo-roads-desktop@2x.jpg">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
-                  <img src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" class="photo__image" alt="Дорога на север">
-                </picture>
-              </a>
-              <div class="photo__info">
-                <div class="photo__title">Дорога на север</div>
-                <div class="photo__author">Автор фото: Петр</div>
-                <div class="photo__likes">96</div>
-              </div>
-            </div>
-          </figure>
-          <figure class="photo">
-            <div class="photo__wrapper">
-              <a class="photo__link" href="img/photo-bridge-desktop@2x.jpg">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-                  <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" class="photo__image" alt="Мост дьявола">
-                </picture>
-              </a>
-              <div class="photo__info">
-                <div class="photo__title">Мост дьявола</div>
-                <div class="photo__author">Автор фото: Антон</div>
-                <div class="photo__likes">254</div>
-              </div>
-            </div>
-          </figure>
-        </section>
-      </section>
-      <section class="video-presentation">
-        <div class="video-presentation__text-wrapper">
-          <h3 class="video-presentation__title">Все еще сомневаетесь?</h3>
-          <p class="video-presentation__description">
-            Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+  <head>
+    <meta charset="utf-8">
+    <title>Фото и видео - Седона</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+  </head>
+  <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <div class="content-wrapper">
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="site-list">
+            <li class="site-list__item button">
+              <a class="site-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item site-list__item--active button">
+              <a class="site-list__link" href="photo.html">Фото и видео</a>
+            </li>
+            <li class="site-list__item button">
+              <a class="site-list__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="site-list__item button">
+              <a class="site-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-nav__header">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <button class="main-nav__close" type="button">Закрыть меню</button>
+        </div>
+        <div class="main-nav__logo"></div>
+      </nav>
+      <header class="page-header">
+        <a href="index.html" class="page-header__logo">
+          <div class="page-header__logo-text"></div>
+        </a>
+      </header>
+      <main class="page-main">
+        <section class="page-description">
+          <h2 class="page-description__title">Фото и видео</h2>
+          <p class="page-description__text">
+            Не можете решиться на путешествие <br>из-за курса? Фотографии помогут <br>вам забыть о политике и экономике.
           </p>
-        </div>
-        <div class="video">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-            <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" class="video__cover" alt="Обложка видео">
-          </picture>
-          <div class="video__progress"></div>
-          <div class="video__controls">
-            <button class="video__replay" type="button">Воспроизвести заново</button>
-            <button class="video__subtitles" type="button">Субтитры</button>
-            <button class="video__fullscreen" type="button">На весь экран</button>
+        </section>
+        <section class="photos">
+          <h3 class="visually-hidden">Фотографии</h3>
+          <section class="photos__list">
+            <figure class="photo">
+              <div class="photo__wrapper">
+                <a class="photo__link" href="img/photo-sunset-desktop@2x.jpg">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x">
+                    <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
+                    <img src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" class="photo__image" alt="Неродные просторы">
+                  </picture>
+                </a>
+                <div class="photo__info">
+                  <div class="photo__title">Неродные просторы</div>
+                  <div class="photo__author">Автор фото: Борис</div>
+                  <div class="photo__likes">1350</div>
+                </div>
+              </div>
+            </figure>
+            <figure class="photo">
+              <div class="photo__wrapper">
+                <a class="photo__link" href="img/photo-cactus-desktop@2x.jpg">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
+                    <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+                    <img src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" class="photo__image" alt="Местная растительность">
+                  </picture>
+                </a>
+                <div class="photo__info">
+                  <div class="photo__title">Местная растительность</div>
+                  <div class="photo__author">Автор фото: Сергей</div>
+                  <div class="photo__likes">143</div>
+                </div>
+              </div>
+            </figure>
+            <figure class="photo">
+              <div class="photo__wrapper">
+                <a class="photo__link" href="img/photo-roads-desktop@2x.jpg">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
+                    <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
+                    <img src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" class="photo__image" alt="Дорога на север">
+                  </picture>
+                </a>
+                <div class="photo__info">
+                  <div class="photo__title">Дорога на север</div>
+                  <div class="photo__author">Автор фото: Петр</div>
+                  <div class="photo__likes">96</div>
+                </div>
+              </div>
+            </figure>
+            <figure class="photo">
+              <div class="photo__wrapper">
+                <a class="photo__link" href="img/photo-bridge-desktop@2x.jpg">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
+                    <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+                    <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" class="photo__image" alt="Мост дьявола">
+                  </picture>
+                </a>
+                <div class="photo__info">
+                  <div class="photo__title">Мост дьявола</div>
+                  <div class="photo__author">Автор фото: Антон</div>
+                  <div class="photo__likes">254</div>
+                </div>
+              </div>
+            </figure>
+          </section>
+        </section>
+        <section class="video-presentation">
+          <div class="video-presentation__text-wrapper">
+            <h3 class="video-presentation__title">Все еще сомневаетесь?</h3>
+            <p class="video-presentation__description">
+              Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+            </p>
           </div>
+          <div class="video">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" type="image/webp" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+              <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" class="video__cover" alt="Обложка видео">
+            </picture>
+            <div class="video__progress"></div>
+            <div class="video__controls">
+              <button class="video__replay" type="button">Воспроизвести заново</button>
+              <button class="video__subtitles" type="button">Субтитры</button>
+              <button class="video__fullscreen" type="button">На весь экран</button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="page-footer">
+        <div class="page-footer__hashtag">#VISITSEDONA</div>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item button">
+              <a href="#" class="social__link social__link--twitter">Седона в Twitter</a>
+            </li>
+            <li class="social__item button">
+              <a href="#" class="social__link social__link--facebook">Седона в Facebook</a>
+            </li>
+            <li class="social__item button">
+              <a href="#" class="social__link social__link--youtube">Седона в Youtube</a>
+            </li>
+          </ul>
         </div>
-      </section>
-    </main>
-    <footer class="page-footer">
-      <div class="page-footer__hashtag">#VISITSEDONA</div>
-      <div class="social">
-        <ul class="social__list">
-          <li class="social__item button">
-            <a href="#" class="social__link social__link--twitter">Седона в Twitter</a>
-          </li>
-          <li class="social__item button">
-            <a href="#" class="social__link social__link--facebook">Седона в Facebook</a>
-          </li>
-          <li class="social__item button">
-            <a href="#" class="social__link social__link--youtube">Седона в Youtube</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__made-by">
-        <span class="page-footer__made-by-text">Разработано </span><span class="page-footer__htmlacademy">
-              <a class="page-footer__htmlacademy-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </span>
-      </div>
-    </footer>
-  </div>
-</body>
+        <div class="page-footer__made-by">
+          <span class="page-footer__made-by-text">Разработано </span><span class="page-footer__htmlacademy">
+                <a class="page-footer__htmlacademy-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </span>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

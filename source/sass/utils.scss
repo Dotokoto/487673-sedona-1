@@ -17,6 +17,7 @@ $gray-color: #f2f2f2;
 }
 
 @mixin remove-button-style() {
+  background-color: transparent;
   border: none;
   padding: 0;
 }
