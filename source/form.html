@@ -13,7 +13,7 @@
       <include src="build/img/sprite.svg"></include>
     </div>
     <div class="content-wrapper">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--nojs">
         <div class="main-nav__wrapper">
           <ul class="site-list">
             <li class="site-list__item button">
@@ -38,7 +38,11 @@
             <svg class="main-nav__button-icon" width="23" height="23"><use xlink:href="#icon-cross"></use></svg>
           </button>
         </div>
-        <div class="main-nav__logo"></div>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип" class="main-nav__logo">
+        </picture>
       </nav>
       <header class="page-header">
         <a href="index.html" class="page-header__logo">
@@ -72,30 +76,30 @@
               <div class="feedback__fields-wrapper">
                 <label class="feedback__label">
                   <span class="feedback__input-name"><span class="hide-desktop">Контактный</span> телефон<sup>*</sup>:</span>
-                  <div class="feedback__input-phone-wrapper">
+                  <span class="feedback__input-phone-wrapper">
                     <input class="feedback__input-phone" placeholder="Введите телефон" name="phone" type="tel" required>
-                  </div>
+                  </span>
                 </label>
                 <label class="feedback__label">
                   <span class="feedback__input-name">Электронная почта<sup>*</sup>:</span>
-                  <div class="feedback__input-email-wrapper">
+                  <span class="feedback__input-email-wrapper">
                     <input class="feedback__input-email" placeholder="Введите e-mail" name="email" type="email" required>
-                  </div>
+                  </span>
                 </label>
               </div>
             </fieldset>
             <fieldset class="feedback__fieldset feedback__fieldset--impressions">
               <h3 class="feedback__fieldset-header">Ваше общее впечатление:</h3>
               <label class="feedback__label-radio">
-                <input class="feedback__radio control control--radio" type="radio" name="impression" value="good">
+                <input class="feedback__radio control control--radio" type="radio" name="impression" value="good" tabindex="0">
                 <span class="feedback__label-text control__text">Скорее положительное</span>
               </label>
               <label class="feedback__label-radio">
-                <input class="feedback__radio control control--radio" type="radio" name="impression" value="bad">
+                <input class="feedback__radio control control--radio" type="radio" name="impression" value="bad" tabindex="0">
                 <span class="feedback__label-text control__text">Скорее отрицательное</span>
               </label>
               <label class="feedback__label-radio">
-                <input class="feedback__radio control control--radio" type="radio" name="impression" value="not-defined">
+                <input class="feedback__radio control control--radio" type="radio" name="impression" value="not-defined" tabindex="0">
                 <span class="feedback__label-text control__text">Затрудняюсь ответить</span>
               </label>
             </fieldset>
@@ -103,19 +107,19 @@
               <h3 class="feedback__fieldset-header">Посещенные<br class="hide-mobile"> достопримечательности:</h3>
               <div class="feedback__checkbox-wrapper">
                 <label class="feedback__label-checkbox">
-                  <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="devils-bridge">
+                  <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="devils-bridge" tabindex="0">
                   <span class="feedback__label-text control__text">Мост Дьявола</span>
                 </label>
                 <label class="feedback__label-checkbox">
-                  <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="slide-park">
+                  <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="slide-park" tabindex="0">
                   <span class="feedback__label-text control__text">Гора-Колокол</span>
                 </label>
                 <label class="feedback__label-checkbox">
-                  <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="bell-rock">
+                  <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="bell-rock" tabindex="0">
                   <span class="feedback__label-text control__text">Слайд-парк</span>
                 </label>
                 <label class="feedback__label-checkbox">
-                  <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="red-rock">
+                  <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="red-rock" tabindex="0">
                   <span class="feedback__label-text control__text">Красные Скалы</span>
                 </label>
               </div>
@@ -129,6 +133,28 @@
             <div class="feedback__submit-wrapper">
               <input class="button feedback__submit" type="submit" value="Отправить отзыв">
               <span class="feedback__required-text"><sup>*</sup> — обязательные поля</span>
+            </div>
+            <div class="feedback__modal modal modal--error">
+              <div class="modal__content">
+                <div class="modal__info">
+                  <h2 class="modal__title">Что-то пошло не так!</h2>
+                  <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+                </div>
+                <div class="modal__controls">
+                  <button class="modal__button button">Ок</button>
+                </div>
+              </div>
+            </div>
+            <div class="feedback__modal modal modal--success">
+              <div class="modal__content">
+                <div class="modal__info">
+                  <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+                  <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br class="desktop-only"> В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
+                </div>
+                <div class="modal__controls">
+                  <button class="modal__button button">Закрыть окно</button>
+                </div>
+              </div>
             </div>
           </form>
         </section>

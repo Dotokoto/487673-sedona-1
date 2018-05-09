@@ -13,7 +13,7 @@
       <include src="build/img/sprite.svg"></include>
     </div>
     <div class="content-wrapper">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--nojs">
         <div class="main-nav__wrapper">
           <ul class="site-list">
             <li class="site-list__item site-list__item--active button">
@@ -38,7 +38,11 @@
             <svg class="main-nav__button-icon" width="23" height="23"><use xlink:href="#icon-cross"></use></svg>
           </button>
         </div>
-        <div class="main-nav__logo"></div>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип" class="main-nav__logo">
+        </picture>
       </nav>
       <header class="page-header page-header--big">
         <a href="index.html" class="page-header__logo">
@@ -129,9 +133,8 @@
           <p class="find-hotel__description">Укажите предполагаемые даты<br> поездки, <br class="tablet-only">и мы покажем вам лучшие<br> предложения гостиниц в Седоне</p>
           <a href="hotel.html" class="find-hotel__button button">Найти гостиницу</a>
         </section>
-        <section class="map">
+        <section class="map" id="map">
           <h2 class="visually-hidden">Карта</h2>
-          <!--TODO: Вставить интерактивную карту-->
         </section>
       </main>
       <footer class="page-footer">
@@ -162,5 +165,24 @@
         </div>
       </footer>
     </div>
+    <script>
+      function initMap() {
+        var sedona = {lat: 34.872126, lng: -111.759776};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: sedona
+        });
+
+        var markerIcon = '/img/icon-map-marker.svg';
+        var marker = new google.maps.Marker({
+          position: sedona,
+          map: map,
+          icon: markerIcon
+        });
+      }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_ukDzOT_sLqjEwtVS5qY4hmj8BvNijFM&callback=initMap">
+    </script>
   </body>
 </html>

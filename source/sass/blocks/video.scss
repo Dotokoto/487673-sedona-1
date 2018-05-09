@@ -18,10 +18,6 @@
   display: block;
 }
 
-.video__control-image {
- // fill: #454545;
-}
-
 .video__replay,
 .video__subtitles,
 .video__fullscreen {
@@ -53,6 +49,7 @@
     left: 22px;
     top: 23px;
     cursor: pointer;
+    z-index: 2;
   }
 
   &::after {
@@ -65,6 +62,7 @@
     top: 20px;
     left: 58px;
     cursor: pointer;
+    z-index: 2;
   }
 }
 
@@ -105,7 +103,7 @@
   }
 
   .video__control-image {
-    fill: #fff;
+    fill: #ffffff;
   }
 
   .video__cover {
@@ -126,13 +124,13 @@
     height: 92px;
     margin-top: -92px;
 
-    &:before {
+    &::before {
       width: 389px;
       left: 93px;
       top: 45px;
     }
 
-    &:after {
+    &::after {
       top: 42px;
       left: 206px;
     }
@@ -154,7 +152,6 @@
     right: 41px;
     top: 36px;
   }
-
 }
 
 @media (min-width: $desktop-width) {
@@ -163,5 +160,9 @@
   .video__controls,
   .video__progress {
     width: 800px;
+  }
+
+  .video__progress::before {
+    width: 540px;
   }
 }

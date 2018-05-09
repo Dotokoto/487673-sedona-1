@@ -93,10 +93,6 @@
     width: 22px;
     margin-top: 5px;
     line-height: 20px;
-
-    &:before {
-      left: -32px;
-    }
   }
 }
 
@@ -131,5 +127,10 @@
 
   .photo__likes {
     width: 32px;
+  }
+
+  .photo__likes-icon {
+    fill: #ffffff;
+    opacity: 1;
   }
 }
