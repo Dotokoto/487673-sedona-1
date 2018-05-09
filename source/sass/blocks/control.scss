@@ -65,3 +65,8 @@
     background-repeat: no-repeat;
   }
 }
+
+.control--radio:focus ~ .control__text,
+.control--checkbox:focus ~ .control__text {
+  outline: rgb(229, 151, 0) auto 5px;
+}
