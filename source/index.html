@@ -133,9 +133,8 @@
           <p class="find-hotel__description">Укажите предполагаемые даты<br> поездки, <br class="tablet-only">и мы покажем вам лучшие<br> предложения гостиниц в Седоне</p>
           <a href="hotel.html" class="find-hotel__button button">Найти гостиницу</a>
         </section>
-        <section class="map">
+        <section class="map" id="map">
           <h2 class="visually-hidden">Карта</h2>
-          <!--TODO: Вставить интерактивную карту-->
         </section>
       </main>
       <footer class="page-footer">
@@ -166,5 +165,24 @@
         </div>
       </footer>
     </div>
+    <script>
+      function initMap() {
+        var sedona = {lat: 34.869496, lng: -111.759461};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: sedona
+        });
+
+        var markerIcon = '/img/icon-map-marker.svg';
+        var marker = new google.maps.Marker({
+          position: sedona,
+          map: map,
+          icon: markerIcon
+        });
+      }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_ukDzOT_sLqjEwtVS5qY4hmj8BvNijFM&callback=initMap">
+    </script>
   </body>
 </html>

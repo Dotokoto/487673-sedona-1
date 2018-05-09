@@ -1,7 +1,9 @@
 @import "../utils.scss";
 
 .map {
+  position: relative;
   height: 350px;
+  width: 100%;
   background-image: url("/img/bg-map-mobile@1x.jpg");
   background-size: contain;
   background-position: center top;
