@@ -34,12 +34,13 @@
   .page-description--main .page-description__title {
     font-size: 21px;
     line-height: 21px;
+    margin-bottom: 33px;
   }
 
   .page-description__text {
     font-size: 14px;
     line-height: 23px;
-    width: 440px;
+    width: 500px;
     margin: 0 auto;
   }
 
@@ -133,5 +134,9 @@
 
   .page-description__text {
     margin-top: 18px;
+  }
+
+  .page-description__text br.desktop-only {
+    display: block;
   }
 }

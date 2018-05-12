@@ -16,16 +16,16 @@
       <nav class="main-nav main-nav--nojs">
         <div class="main-nav__wrapper">
           <ul class="site-list">
-            <li class="site-list__item button">
+            <li class="site-list__item">
               <a class="site-list__link" href="index.html">Главная</a>
             </li>
-            <li class="site-list__item button">
+            <li class="site-list__item">
               <a class="site-list__link" href="photo.html">Фото и видео</a>
             </li>
-            <li class="site-list__item site-list__item--active button">
+            <li class="site-list__item site-list__item--active">
               <a class="site-list__link" href="form.html">Форма отзыва</a>
             </li>
-            <li class="site-list__item button">
+            <li class="site-list__item">
               <a class="site-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
             </li>
           </ul>
@@ -39,9 +39,9 @@
           </button>
         </div>
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип" class="main-nav__logo">
+          <source media="(max-width: 767px)" srcset="img/logo-sedona-mobile.svg">
+          <source media="(max-width: 1199px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-sedona-desktop.svg" width="102" height="83" alt="Логотип" class="main-nav__logo">
         </picture>
       </nav>
       <header class="page-header">
@@ -52,7 +52,7 @@
       <main class="page-main">
         <section class="page-description">
           <h2 class="page-description__title">Оставьте свой отзыв</h2>
-          <p class="page-description__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <p class="page-description__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br class="desktop-only"> а также о посещенных вами достопримечательностях</p>
         </section>
         <section class="feedback">
           <form class="feedback__form" action="https://echo.htmlacademy.ru">
@@ -60,15 +60,15 @@
               <h3 class="feedback__fieldset-header">Представьтесь:</h3>
               <label class="feedback__label">
                 <span class="feedback__input-name">Имя<sup>*</sup>:</span>
-                <input class="feedback__input-text" name="firstname" type="text" required>
+                <input class="feedback__input-text" name="firstname" type="text" required placeholder="Петр">
               </label>
               <label class="feedback__label">
                 <span class="feedback__input-name">Фамилия<sup>*</sup>:</span>
-                <input class="feedback__input-text" name="lastname" type="text" required>
+                <input class="feedback__input-text" name="lastname" type="text" required placeholder="Иванов">
               </label>
               <label class="feedback__label">
                 <span class="feedback__input-name">Отчество:</span>
-                <input class="feedback__input-text" name="patronymicname" type="text">
+                <input class="feedback__input-text" name="patronymicname" type="text" placeholder="Александрович">
               </label>
             </fieldset>
             <fieldset class="feedback__fieldset feedback__fieldset--contacts">
@@ -90,36 +90,36 @@
             </fieldset>
             <fieldset class="feedback__fieldset feedback__fieldset--impressions">
               <h3 class="feedback__fieldset-header">Ваше общее впечатление:</h3>
-              <label class="feedback__label-radio">
-                <input class="feedback__radio control control--radio" type="radio" name="impression" value="good" tabindex="0">
+              <label class="feedback__label-radio control control--radio" tabindex="0">
+                <input class="feedback__radio control__input" type="radio" name="impression" value="good" checked tabindex="0">
                 <span class="feedback__label-text control__text">Скорее положительное</span>
               </label>
-              <label class="feedback__label-radio">
-                <input class="feedback__radio control control--radio" type="radio" name="impression" value="bad" tabindex="0">
+              <label class="feedback__label-radio control control--radio" tabindex="0">
+                <input class="feedback__radio control__input" type="radio" name="impression" value="bad" tabindex="0">
                 <span class="feedback__label-text control__text">Скорее отрицательное</span>
               </label>
-              <label class="feedback__label-radio">
-                <input class="feedback__radio control control--radio" type="radio" name="impression" value="not-defined" tabindex="0">
+              <label class="feedback__label-radio control control--radio" tabindex="0">
+                <input class="feedback__radio control__input" type="radio" name="impression" value="not-defined" tabindex="0">
                 <span class="feedback__label-text control__text">Затрудняюсь ответить</span>
               </label>
             </fieldset>
             <fieldset class="feedback__fieldset feedback__fieldset--landmarks">
               <h3 class="feedback__fieldset-header">Посещенные<br class="hide-mobile"> достопримечательности:</h3>
               <div class="feedback__checkbox-wrapper">
-                <label class="feedback__label-checkbox">
-                  <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="devils-bridge" tabindex="0">
+                <label class="feedback__label-checkbox control control--checkbox" tabindex="0">
+                  <input class="feedback__checkbox control__input" type="checkbox" name="places" value="devils-bridge" checked tabindex="0">
                   <span class="feedback__label-text control__text">Мост Дьявола</span>
                 </label>
-                <label class="feedback__label-checkbox">
-                  <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="slide-park" tabindex="0">
+                <label class="feedback__label-checkbox control control--checkbox" tabindex="0">
+                  <input class="feedback__checkbox control__input" type="checkbox" name="places" value="slide-park" checked tabindex="0">
                   <span class="feedback__label-text control__text">Гора-Колокол</span>
                 </label>
-                <label class="feedback__label-checkbox">
-                  <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="bell-rock" tabindex="0">
+                <label class="feedback__label-checkbox control control--checkbox" tabindex="0">
+                  <input class="feedback__checkbox control__input" type="checkbox" name="places" value="bell-rock" checked tabindex="0">
                   <span class="feedback__label-text control__text">Слайд-парк</span>
                 </label>
-                <label class="feedback__label-checkbox">
-                  <input class="feedback__checkbox control control--checkbox" type="checkbox" name="places" value="red-rock" tabindex="0">
+                <label class="feedback__label-checkbox control control--checkbox" tabindex="0">
+                  <input class="feedback__checkbox control__input" type="checkbox" name="places" value="red-rock" tabindex="0">
                   <span class="feedback__label-text control__text">Красные Скалы</span>
                 </label>
               </div>
@@ -181,7 +181,7 @@
           </ul>
         </div>
         <div class="page-footer__made-by">
-          <span class="page-footer__made-by-text">Разработано </span><span class="page-footer__htmlacademy">
+          <span class="page-footer__made-by-text">Разработано </span><span class="page-footer__htmlacademy" tabindex="0">
                 <a class="page-footer__htmlacademy-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
               </span>
         </div>
