@@ -2,7 +2,7 @@
 
 .recommendation {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .recommendation__image {
@@ -37,12 +37,12 @@
 
 .recommendation__text {
   font-size: 14px;
-  line-height: 21px;
+  line-height: 22px;
 }
 
 @media (min-width: $tablet-width) {
   .recommendation {
-    margin: 0 45px;
+    margin: 0 45px 20px;
     width: 33%;
     font-size: 14px;
   }

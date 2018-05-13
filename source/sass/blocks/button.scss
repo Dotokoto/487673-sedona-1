@@ -12,6 +12,16 @@
   }
 
   &:active {
-    background-color: #5496bd;
+    background-color: #5495bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+
+  &:disabled,
+  .button--disabled {
+    background-color: #e5e5e5;
   }
 }

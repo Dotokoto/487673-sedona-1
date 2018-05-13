@@ -1,6 +1,6 @@
 @import "../utils.scss";
 
-.control {
+.control__input {
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -35,11 +35,11 @@
   }
 }
 
-.control:checked ~ .control__text::after {
+.control__input:checked ~ .control__text::after {
   display: block;
 }
 
-.control--radio ~ .control__text {
+.control--radio .control__text {
   &::before,
   &::after {
     border-radius: 50%;
@@ -53,7 +53,7 @@
   }
 }
 
-.control--checkbox ~ .control__text {
+.control--checkbox .control__text {
   &::before {
     border-radius: 5px;
   }
@@ -61,12 +61,26 @@
   &::after {
     width: 23px;
     height: 16px;
-    background-image: url("/img/icon-tick.svg");
+    background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
   }
 }
 
-.control--radio:focus ~ .control__text,
-.control--checkbox:focus ~ .control__text {
+.control--radio:focus .control__text,
+.control--checkbox:focus .control__text {
   outline: rgb(229, 151, 0) auto 5px;
+}
+
+.control:hover .control__input ~ .control__text::before {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+}
+
+.control:active .control__input ~ .control__text::before {
+  background-color: #d5d5d5;
+  border-color: #d5d5d5;
+}
+
+.control:active .control__input ~ .control__text::after {
+  opacity: 0.3;
 }

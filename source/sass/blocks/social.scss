@@ -34,6 +34,10 @@
   display: block;
 }
 
+.social__link:active svg {
+  opacity: 0.3;
+}
+
 .social__item {
   display: inline-block;
 }

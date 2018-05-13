@@ -26,7 +26,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 12px 17px;
+  margin: 14px 17px;
   border: none;
   padding: 0;
 
@@ -44,13 +44,17 @@
     border-top: none;
     margin-top: -8px;
   }
+
+  &:first-child.feedback__fieldset::before {
+    height: 2px;
+  }
 }
 
 .feedback__fieldset-header {
   font-size: 18px;
   line-height: 21px;
   font-weight: 700;
-  margin-top: 22px;
+  margin-top: 20px;
   letter-spacing: 0.3px;
   text-align: center;
   text-transform: uppercase;
@@ -71,11 +75,20 @@
   box-sizing: border-box;
 }
 
+.feedback__textarea:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: bold;
+  box-sizing: border-box;
+  font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
+}
+
 .feedback__textarea {
   padding: 20px;
   width: 100%;
   border: none;
   resize: none;
+  overflow: auto;
 
   background-color: $gray-color;
 }
@@ -103,6 +116,16 @@
 
   background-color: $gray-color;
   border: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus,
+  &:active {
+    background-color: #ffffff;
+    border: 4px solid #e5e5e5;
+  }
 }
 
 .feedback__label-text {
@@ -121,7 +144,7 @@
 
 .feedback__fieldset--contacts .feedback__label {
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
 }
 
 .feedback__fieldset--contacts .feedback__input-name {
@@ -155,12 +178,12 @@
 }
 
 .feedback__input-phone-wrapper::after {
-  background-image: url("/img/icon-phone.svg");
+  background-image: url("../img/icon-phone.svg");
   background-size: 18px 18px;
 }
 
 .feedback__input-email-wrapper::after {
-  background-image: url("/img/icon-mail.svg");
+  background-image: url("../img/icon-mail.svg");
   background-size: 20px 16px;
   background-position: 22px 19px;
 }
@@ -202,6 +225,7 @@
     font-size: 20px;
     line-height: 22px;
     margin-bottom: 65px;
+    margin-top: 22px;
   }
 
   .feedback__label-radio {
@@ -233,19 +257,41 @@
     display: flex;
   }
 
+  .feedback__fieldset--emotions .feedback__fieldset-header,
+  .feedback__fieldset--landmarks .feedback__fieldset-header,
+  .feedback__fieldset--contacts .feedback__fieldset-header {
+    &::before,
+    &::after {
+      content: "";
+      width: 125px;
+      height: 1px;
+      border-top: 1px solid $gray-color;
+      position: absolute;
+      top: 20px;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
   .feedback__checkbox-wrapper {
     flex-wrap: wrap;
     align-content: center;
     flex-direction: row;
     height: auto;
-    width: 465px;
+    width: auto;
     margin: 0 auto 30px;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .feedback__label-checkbox {
     width: 205px;
-    margin: 13px 20px 13px 0;
+    margin: 13px 27px 13px;
   }
 
   .feedback__submit-wrapper {
@@ -294,7 +340,7 @@
   }
 
   .feedback__textarea {
-    padding: 15px 20px;
+    padding: 20px;
   }
 }
 
@@ -333,10 +379,12 @@
   .feedback__fieldset-header {
     margin-top: 10px;
     line-height: 23px;
+    letter-spacing: 0.7px;
   }
 
   .feedback__fieldset--impressions .feedback__fieldset-header {
     text-align: center;
+    margin-right: 45px;
   }
 
   .feedback__fieldset--name {
@@ -378,5 +426,19 @@
 
   .feedback__fieldset--landmarks {
     margin-bottom: 5px;
+  }
+
+  .feedback__fieldset--emotions .feedback__fieldset-header,
+  .feedback__fieldset--landmarks .feedback__fieldset-header,
+  .feedback__fieldset--contacts .feedback__fieldset-header {
+    &::before,
+    &::after {
+      width: 280px;
+    }
+  }
+
+  .feedback__label-checkbox {
+    width: 200px;
+    margin: 13px 0 13px;
   }
 }
