@@ -33,8 +33,9 @@
 
   .page-description--main .page-description__title {
     font-size: 21px;
-    line-height: 21px;
+    line-height: 24px;
     margin-bottom: 33px;
+    margin-top: 50px;
   }
 
   .page-description__text {
@@ -42,11 +43,6 @@
     line-height: 23px;
     width: 500px;
     margin: 0 auto;
-  }
-
-  .page-description__title br,
-  .page-description__text br {
-    display: none;
   }
 
   .page-description::before,
@@ -128,7 +124,7 @@
   }
 
   .page-description__title {
-    font-size: 30px;
+    font-size: 31px;
     line-height: 54px;
   }
 
