@@ -1,7 +1,12 @@
 @import "utils.scss";
 
-.tablet-only {
+.tablet-only,
+.desktop-only {
   display: none;
+}
+
+.mobile-only {
+  display: block;
 }
 
 .hide-mobile {
@@ -9,9 +14,13 @@
 }
 
 @media (min-width: $tablet-width) {
+  .mobile-only {
+    display: none;
+  }
+
   .tablet-only,
   .hide-mobile {
-    display: inline;
+    display: block;
   }
 }
 

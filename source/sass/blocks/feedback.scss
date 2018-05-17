@@ -84,11 +84,14 @@
 }
 
 .feedback__textarea {
-  padding: 20px;
-  width: 100%;
+  padding: 17px 20px 17px;
   border: none;
   resize: none;
   overflow: auto;
+  width: 280px;
+  height: 160px;
+  margin-top: 2px;
+  box-sizing: border-box;
 
   background-color: $gray-color;
 }
@@ -128,6 +131,10 @@
   }
 }
 
+.feedback__input-text {
+  margin-top: 5px;
+}
+
 .feedback__label-text {
   font-size: 18px;
   line-height: 26px;
@@ -145,6 +152,7 @@
 .feedback__fieldset--contacts .feedback__label {
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: 10px;
 }
 
 .feedback__fieldset--contacts .feedback__input-name {
@@ -161,7 +169,8 @@
 .feedback__input-phone-wrapper,
 .feedback__input-email-wrapper {
   position: relative;
-  margin-top: 4px;
+  margin-top: 7px;
+  margin-left: 2px;
 
   &::after {
     content: "";
@@ -191,11 +200,30 @@
 .feedback__label-radio,
 .feedback__label-checkbox {
   height: 60px;
-  margin: 9px 0;
+  margin: 9px 0 10px;
 }
 
 .feedback__fieldset:nth-of-type(2n + 3) {
   margin-top: 0;
+}
+
+.feedback__fieldset--impressions {
+  margin-bottom: 0;
+}
+
+.feedback__fieldset--impressions .feedback__fieldset-header {
+  margin-top: 24px;
+  margin-bottom: 27px;
+}
+
+.feedback__fieldset--landmarks .feedback__fieldset-header {
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+
+.feedback__fieldset.feedback__fieldset--emotions {
+  margin-top: -5px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -203,7 +231,68 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 52px;
     margin-bottom: 20px;
+  }
+
+  .feedback__fieldset--landmarks .feedback__fieldset-header {
+    margin-bottom: 31px;
+    margin-top: 18px;
+    line-height: 25px;
+  }
+
+  .feedback__textarea {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding: 15px 20px;
+    letter-spacing: -0.2px;
+  }
+
+  .feedback__fieldset--emotions {
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+
+  .feedback__label-radio,
+  .feedback__label-checkbox {
+    margin: 9px 0;
+  }
+
+  .feedback__fieldset--impressions .feedback__fieldset-header {
+    margin-top: 22px;
+    margin-bottom: 65px;
+  }
+
+  .feedback__fieldset--contacts .feedback__label {
+    margin-bottom: 16px;
+  }
+
+  .feedback__fieldset--impressions {
+    margin-bottom: 14px;
+    order: -1;
+  }
+
+  .feedback__input-phone-wrapper,
+  .feedback__input-email-wrapper {
+    margin-top: 4px;
+    margin-left: 0;
+  }
+
+  .feedback__input-phone-wrapper {
+    margin-bottom: 6px;
+  }
+
+  .feedback__fieldset--impressions .feeback__fieldset-header {
+    margin-top: 20px;
+  }
+
+  .feedback__fieldset.feedback__fieldset--impressions {
+    padding-right: 10px;
+  }
+
+  .feedback__fieldset .feedback__fieldset--name .feedback__fieldset-header {
+    margin-bottom: 56px;
   }
 
   .feedback__fieldset {
@@ -222,18 +311,18 @@
   }
 
   .feedback__fieldset-header {
-    font-size: 20px;
+    font-size: 21px;
     line-height: 22px;
     margin-bottom: 65px;
     margin-top: 22px;
   }
 
   .feedback__label-radio {
-    margin: 20px 0;
+    margin: 17px 0;
   }
 
-  .feedback__fieldset--impressions {
-    order: -1;
+  .feedback__fieldset--name .feedback__input-name {
+    margin: 0 12px 0 3px;
   }
 
   .feedback__fieldset--name,
@@ -245,7 +334,14 @@
   }
 
   .feedback__fieldset--name {
-    border-left: 1px solid $gray-color;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      border-left: 1px solid $gray-color;
+      height: 290px;
+      top: 30px;
+    }
   }
 
   .feedback__fieldset--name .feedback__fieldset-header,
@@ -267,7 +363,7 @@
       height: 1px;
       border-top: 1px solid $gray-color;
       position: absolute;
-      top: 20px;
+      top: 32px;
     }
 
     &::before {
@@ -285,20 +381,21 @@
     flex-direction: row;
     height: auto;
     width: auto;
-    margin: 0 auto 30px;
+    margin: 0 auto 35px;
     justify-content: center;
   }
 
   .feedback__label-checkbox {
     width: 205px;
-    margin: 13px 27px 13px;
+    margin: 14px 27px 13px;
   }
 
   .feedback__submit-wrapper {
     width: 648px;
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 22px;
+    margin-bottom: 42px;
   }
 
   .feedback__submit {
@@ -314,7 +411,7 @@
   }
 
   .feedback__fieldset--contacts {
-    margin-top: 22px;
+    margin-top: 28px;
     margin-bottom: 20px;
   }
 
@@ -325,26 +422,51 @@
   .feedback__input-email,
   .feedback__input-phone {
     width: 650px;
+    margin-top: 6px;
+  }
+
+  .feedback__input-text {
+    margin-top: 4px;
   }
 
   .feedback__fieldset--contacts .feedback__input-name {
-    margin-top: 5px;
-  }
-
-  .feedback__fieldset--landmarks .feedback__fieldset-header {
-    margin-bottom: 35px;
+    margin-top: 0;
   }
 
   .feedback__fieldset--emotions .feedback__fieldset-header {
     margin-bottom: 60px;
   }
 
-  .feedback__textarea {
-    padding: 20px;
+  .feedback__input-phone-wrapper::after,
+  .feedback__input-email-wrapper::after {
+    margin-top: 6px;
+  }
+
+  .feedback__input-email-wrapper::after {
+    background-position: 20px 21px;
+  }
+
+  .feedback__fieldset.feedback__fieldset--landmarks .feedback__fieldset--header {
+    margin-top: 18px;
+    line-height: 24px;
+  }
+
+  .feedback__fieldset--landmarks .feedback__fieldset-header::before,
+  .feedback__fieldset--landmarks .feedback__fieldset-header::after {
+    top: 42px;
+  }
+
+  .feedback__fieldset--name .feedback__fieldset-header {
+    margin-bottom: 56px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .feedback__form {
+    margin-top: auto;
+    margin-bottom: 15px;
+  }
+
   .feedback {
     width: 960px;
     margin: 0 auto;
@@ -378,22 +500,31 @@
 
   .feedback__fieldset-header {
     margin-top: 10px;
+    margin-bottom: 55px;
     line-height: 23px;
-    letter-spacing: 0.7px;
+    letter-spacing: 1px;
+    font-size: 20px;
   }
 
   .feedback__fieldset--impressions .feedback__fieldset-header {
     text-align: center;
-    margin-right: 45px;
+    letter-spacing: 0.7px;
+    margin: 10px 45px 58px 8px;
   }
 
   .feedback__fieldset--name {
     padding-left: 75px;
+
+    &::after {
+      height: 290px;
+      top: 14px;
+    }
   }
 
   .feedback__fieldset--contacts {
     display: block;
-    margin-top: 30px;
+    margin-top: 36px;
+    margin-bottom: 4px;
   }
 
   .feedback__fieldset--contacts .feedback__label {
@@ -408,10 +539,13 @@
   .feedback__input-phone,
   .feedback__input-email {
     width: 315px;
+    letter-spacing: -0.2px;
+    padding-left: 20px;
   }
 
   .feedback__fieldset--contacts .feedback__fieldset-header {
-    margin-bottom: 65px;
+    margin-bottom: 61px;
+    line-height: 34px;
   }
 
   .feedback__fieldset--contacts .feedback__fields-wrapper {
@@ -425,7 +559,11 @@
   }
 
   .feedback__fieldset--landmarks {
-    margin-bottom: 5px;
+    margin-bottom: 14px;
+  }
+
+  .feedback__fieldset--landmarks .feedback__fieldset-header {
+    margin-bottom: 27px;
   }
 
   .feedback__fieldset--emotions .feedback__fieldset-header,
@@ -434,11 +572,42 @@
     &::before,
     &::after {
       width: 280px;
+      top: 27px;
     }
   }
 
+  .feedback__fieldset--emotions .feedback__fieldset-header {
+    &::before,
+    &::after {
+      top: 20px;
+    }
+  }
+
+  .feedback__textarea {
+    padding: 13px 20px 16px;
+    letter-spacing: -0.3px;
+  }
+
   .feedback__label-checkbox {
-    width: 200px;
-    margin: 13px 0 13px;
+    width: auto;
+    margin: 13px 4px 13px -3px;
+  }
+
+  .feedback__fieldset--name .feedback__fieldset-header {
+    margin-left: 4px;
+  }
+
+  .feedback__input-text {
+    margin-top: 3px;
+    margin-left: 5px;
+  }
+
+  .feedback__fieldset--landmarks .feedback__fieldset-header::before,
+  .feedback__fieldset--landmarks .feedback__fieldset-header::after {
+    top: 42px;
+  }
+
+  .feedback__fieldset.feedback__fieldset--emotions {
+    margin-bottom: 0;
   }
 }

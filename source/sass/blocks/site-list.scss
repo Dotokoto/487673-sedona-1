@@ -3,15 +3,22 @@
 .site-list {
   @include remove-list-style();
   position: relative;
-
   text-align: center;
   text-transform: uppercase;
   border: 0;
-  height: 58px;
 
   color: #ffffff;
 
   @media (max-width: $tablet-width - 1) {
+    .site-list__item {
+      height: 56px;
+      background-color: #81b3d2;
+
+      &:hover {
+        background-color: #669ec0;
+      }
+    }
+
     &::after {
       content: "";
       display: block;
@@ -53,6 +60,7 @@
   .site-list {
     display: flex;
     justify-content: space-between;
+    background-color: #ffffff;
 
     &::after {
       display: block;

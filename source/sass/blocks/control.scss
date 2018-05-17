@@ -84,3 +84,9 @@
 .control:active .control__input ~ .control__text::after {
   opacity: 0.3;
 }
+
+@media (min-width: $desktop-width) {
+  .control__text {
+    line-height: 60px;
+  }
+}
