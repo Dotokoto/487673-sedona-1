@@ -15,6 +15,7 @@
   margin: 0 auto;
   padding: 0 50px;
   height: 58px;
+  cursor: pointer;
 }
 
 .feedback__submit-wrapper {
@@ -85,6 +86,7 @@
 
 .feedback__textarea {
   padding: 17px 20px 17px;
+  font-size: 18px;
   border: none;
   resize: none;
   overflow: auto;
@@ -92,6 +94,7 @@
   height: 160px;
   margin-top: 2px;
   box-sizing: border-box;
+  font-family: inherit;
 
   background-color: $gray-color;
 }
@@ -246,7 +249,6 @@
     height: auto;
     margin-top: 0;
     padding: 15px 20px;
-    letter-spacing: -0.2px;
   }
 
   .feedback__fieldset--emotions {
@@ -584,8 +586,7 @@
   }
 
   .feedback__textarea {
-    padding: 13px 20px 16px;
-    letter-spacing: -0.3px;
+    padding: 14px 20px 15px;
   }
 
   .feedback__label-checkbox {
