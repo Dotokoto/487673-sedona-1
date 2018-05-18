@@ -41,15 +41,17 @@
   display: block;
   height: 34px;
   width: 27px;
-  background-color: #000000;
-  mask: url("../img/logo-htmlacademy.svg") center center no-repeat;
+}
+
+.page-footer__htmlacademy-link svg {
+  fill: #000000;
 
   &:hover {
-    background-color: #81b3d1;
+    fill: #81b3d1;
   }
 
   &:active {
-    background-color: #a8a8a8;
+    fill: #a8a8a8;
   }
 }
 
